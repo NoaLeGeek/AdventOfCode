@@ -1,12 +1,3 @@
-# part 1
-# A X --> Rock +1
-# B Y --> Paper +2
-# C Z --> Scissors +3
-# win +6 draw +3 lose +0
-# part 2
-# ABC stays the same
-# X Y Z --> +0 +3 +6
-
 def main():
     INPUT_FILE = "input-full.txt"
     points = [[3, 1, 2], [1, 2, 3], [2, 3, 1]]
