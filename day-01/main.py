@@ -1,8 +1,9 @@
 def main():
-    INPUT_FILE = 'dat-01\input-full.txt'
+    INPUT_FILE = 'input-full.txt'
     with open(INPUT_FILE, 'r') as file:
         data = file.read()
-        print(max(map(sum, [map(int, group) for group in map(str.split, data.split('\n\n'))])))
+        print(sum(sorted(list(map(sum, [map(int, group) for group in map(str.split, data.split('\n\n'))])))[-3:]))
+
 
 
 if __name__ == '__main__':
