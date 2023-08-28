@@ -14,7 +14,7 @@ def main():
     for move in moves:
         n, move_from, move_to = map(int, re.findall(r"\d+", move))
         move_from, move_to = move_from - 1, move_to - 1
-        items = list(filter(lambda x: x != '', columns[move_from]))[:n][::-1]
+        items = list(filter(lambda x: x != '', columns[move_from]))[:n]
         columns[move_to] = items + list(filter(lambda x: x != '', columns[move_to]))
         columns[move_from] = columns[move_from][n:]
     print("".join(map(lambda x: x[0], columns)).replace("[", "").replace("]", ""))
