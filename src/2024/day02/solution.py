@@ -16,20 +16,20 @@ class Day02(AoCProblem):
         return True 
 
     def part1(self):
-        s = 0
+        c = 0
         for row in self.data:
             if self.is_valid(row):
-                s += 1
-        return s
+                c += 1
+        return c
 
     def part2(self):
-        s = 0
+        c = 0
         for row in self.data:
             if self.is_valid(row):
-                s += 1
+                c += 1
             else:
                 for i in range(len(row)):
                     if self.is_valid(row[:i] + row[i + 1:]):
-                        s += 1
+                        c += 1
                         break
-        return s
+        return c
