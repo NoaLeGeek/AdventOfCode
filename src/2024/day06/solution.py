@@ -1,5 +1,4 @@
 from aoc.base import AoCProblem
-from functools import cmp_to_key
 
 class Day06(AoCProblem):
     def parse(self, raw_input: str):
